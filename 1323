@@ -1,0 +1,20 @@
+class Solution {
+    public int maximum69Number (int num) {
+        String n = Integer.toString(num);
+
+        for(int i = 0 ; i<n.length() ; i++){
+            char ch = n.charAt(i);
+            if(ch == '6'){
+        StringBuilder sb = new StringBuilder(n);
+        sb.setCharAt(i, '9');
+        String modifiedString = sb.toString();
+
+         int number = Integer.ValueOf(modifiedString);
+
+         return number;
+            }
+        }
+
+        return num ;
+    }
+}
